@@ -1,0 +1,20 @@
+---
+- name: Install ubuntu basic tools
+  hosts: [researcher]
+  become: true
+  become_method: sudo
+  tasks:
+  - name: test connectivity
+    ping:
+  - name: Ansible apt install Git, Vim, Curl, Unzip
+    apt:
+      name: "{{ item }}"
+      update_cache: yes
+    loop:
+      - git
+      - vim
+      - curl
+      - unzip
+      - dconf-editor
+      - vlc
+
