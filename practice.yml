@@ -1,1 +1,5 @@
 ---
+- name: Configure Apache ServerName
+  lineinfile:
+    path: /etc/apache2/apache2.conf
+    line: "ServerName localhost"
