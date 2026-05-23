@@ -3,3 +3,8 @@
   lineinfile:
     path: /etc/apache2/apache2.conf
     line: "ServerName localhost"
+
+# below command is equelent to sudo apt update
+- name: Update apt cache
+  apt:
+    update_cache: yes
