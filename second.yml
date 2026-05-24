@@ -1,7 +1,0 @@
----
-- name: My second playbook
-  hosts: localhost
-
-  test:
-          -name : Print Hello World
-           debug: msg="hello world'
